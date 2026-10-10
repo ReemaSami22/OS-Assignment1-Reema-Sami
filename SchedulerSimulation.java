@@ -298,6 +298,7 @@ System.out.println("Total Context Switches: " + contextSwitchCount);
                 // If the process still has remaining time, check if there are more processes in queue
                 if (!processQueue.isEmpty()) {
                     // Re-enqueue the process to give it another chance to run in the next round
+                    process.setLastReadyTime(System.currentTimeMillis());
                     addProcessToQueue(process, processQueue, processMap);
                 } else {
                     // If this is the last process in the queue, run it to completion
