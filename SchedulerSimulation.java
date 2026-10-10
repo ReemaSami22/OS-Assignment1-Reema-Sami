@@ -32,6 +32,9 @@ class Process implements Runnable {
 
      // FEATURE 1: Add priority field (integer 1-10, where 10 is highest)
     private int priority; // Priority of the process (1-10, 10 being highest)
+    // FEATURE 3: fields to track waiting time
+    private long totalWaitingTime; // total time spent waiting in the queue (ms)
+    private long lastReadyTime;    // last time the process entered the ready queue
 
     public Process(String name, int burstTime, int timeQuantum, int priority) {
         this.name = name;
@@ -39,6 +42,9 @@ class Process implements Runnable {
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // remaining time is equal to the burst time
          this.priority = priority; // FEATURE 1:
+         // FEATURE 3: start waiting time tracking
+        this.totalWaitingTime = 0;
+        this.lastReadyTime = System.currentTimeMillis();
     }
 
     // This method will be called when the thread for this process is started
