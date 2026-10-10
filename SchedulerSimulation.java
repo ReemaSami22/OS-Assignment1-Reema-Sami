@@ -227,15 +227,12 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
-        
+        // FEATURE 2: print the total number of context switches
+System.out.println("Total Context Switches: " + contextSwitchCount);
         // Loop to manage the scheduling of processes
         while (!processQueue.isEmpty()) {
             // Get the next thread from the queue (FIFO)
             Thread currentThread = processQueue.poll(); // Dequeues the next thread
-            // FEATURE 2: Increment context switch counter when a new process starts running
-            contextSwitchCount++;
-// Retrieve the process associated with the thread from the map
-            Process process = processMap.get(currentThread);
 
             // Print the current process queue (list of process IDs in the queue)
             System.out.println(Colors.BOLD + Colors.MAGENTA + "┌─ Ready Queue " + "─".repeat(65) + Colors.RESET);
@@ -293,9 +290,8 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
-                           // FEATURE 2: Display total context switches at the end of simulation
-        System.out.println(Colors.BOLD + Colors.BRIGHT_YELLOW + 
-    }
+                           // FEATURE 2: print the total number of context switches
+System.out.println("Total Context Switches: " + contextSwitchCount);
 }
 
     
