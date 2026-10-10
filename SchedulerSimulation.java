@@ -261,6 +261,8 @@ System.out.println("Total Context Switches: " + contextSwitchCount);
             Thread currentThread = processQueue.poll(); // Dequeues the next thread
             // FEATURE 2: a new process gets the CPU, so count a context switch
         contextSwitchCount++;
+        // FEATURE 3: calculate how long this process waited in the queue
+        processMap.get(currentThread).updateWaitingTime();
 
             // Print the current process queue (list of process IDs in the queue)
             System.out.println(Colors.BOLD + Colors.MAGENTA + "┌─ Ready Queue " + "─".repeat(65) + Colors.RESET);
