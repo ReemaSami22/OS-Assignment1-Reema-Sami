@@ -35,8 +35,7 @@ class Process implements Runnable {
         this.name = name;
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
-        this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
-       
+        this.remainingTime = burstTime; // remaining time is equal to the burst time
      
     }
 
