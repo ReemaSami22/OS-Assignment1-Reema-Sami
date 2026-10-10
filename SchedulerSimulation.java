@@ -296,6 +296,7 @@ public class SchedulerSimulation {
                            // FEATURE 2: Display total context switches at the end of simulation
         System.out.println(Colors.BOLD + Colors.BRIGHT_YELLOW + 
     }
+}
 
     
     // Method to add a process to the queue and map, while printing a "ready" message
