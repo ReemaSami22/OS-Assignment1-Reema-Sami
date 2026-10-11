@@ -284,7 +284,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading is used in real-world applications such as online shopping apps. In a shopping app, many tasks run at the same time: loading the product images, searching for products, updating the shopping cart, and processing the payment. Each task can run in its own thread, so the app does not freeze while one of them is waiting. This is similar to my scheduler simulation, where every process is a thread and the Round Robin scheduler gives each one a short time quantum on the CPU before moving to the next one in the ready queue]
 
 ### Optional: What would you like to learn more about?
 
