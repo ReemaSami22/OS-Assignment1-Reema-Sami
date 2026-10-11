@@ -356,15 +356,15 @@ P9 (Priority: 3) added to ready queue | Burst time: 8318ms]
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [P1 enters this state when its thread object is created using ⁠new Thread(process)⁠ inside ⁠addProcessToQueue()⁠.]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [P1 transitions to this state after calling ⁠Thread.start()⁠ in the scheduler loop, making it ready and waiting for CPU allocation.]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [P1 is actively executing its ⁠run()⁠ method on the CPU during its assigned time quantum.]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [P1 enters this state when paused via ⁠Thread.sleep()⁠ during execution, or when the main thread calls ⁠join()⁠ waiting for it.]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 reaches this state when its ⁠run()⁠ method completes execution or finishes its process (e.g., printing "finished execution").]
 
 ## Question 4: Real-World Applications
 
@@ -377,18 +377,22 @@ P9 (Priority: 3) added to ready queue | Burst time: 8318ms]
 ### Example 1 (operating-system level): [Name of scenario]
 
 **Description**:
-[Describe the real-world scenario.]
+[The core operating system scheduler manages multiple active user programs and system processes running simultaneously on a single CPU core. It allocates a fixed time slice to each program so that multiple applications (like a web browser, media player, and text editor) appear to run concurrently.]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[It ensures fairness and responsiveness by preventing any single background process from monopolizing the CPU.]
 
 ### Example 2: [Name of application/scenario]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[A multi-threaded web server handling incoming client requests or API calls using a shared worker thread pool. Instead of letting one heavy request block everything else, requests are processed in small time slices]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[It provides high predictability and responsiveness, ensuring that short requests (like fetching a small status page) are not delayed by large data downloads.
+ Relating to your simulation:
+ Process: An incoming client request or task handled by a thread.
+ Time Quantum: The maximum processing time allocated per turn before switching to the next request.
+ Context Switch: Pausing the current thread's execution context and resuming another client request's thread.]
 
 ## Summary
 
