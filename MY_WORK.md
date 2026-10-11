@@ -397,13 +397,14 @@ P9 (Priority: 3) added to ready queue | Burst time: 8318ms]
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.Difference between processes and threads in memory and speed.
+   Thread lifecycle states (New, Runnable, Running, Waiting, Terminated).
+2.Thread lifecycle states (New, Runnable, Running, Waiting, Terminated).
+3.Fairness and prevention of process starvation in Round-Robin scheduling.
 
 **Concepts I need to study more:**
-1.
-2.
+1. Multi-core processor parallelism in OS kernels.
+2. Advanced process scheduling algorithms like Priority Scheduling.
 
 ---
 
