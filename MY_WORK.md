@@ -260,7 +260,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[In this assignment I learned how multithreading works in Java. The Runnable interface holds the task that I want the thread to run, and Thread.start() begins running this task in a separate thread, so the threads can work in parallel with the main thread. Thread.join() makes the main thread wait until the other thread finishes its task, and then the program continues. Thread.sleep() pauses a thread for a fixed time, for example 4 seconds, to simulate the time a task needs to complete. What surprised me is that the processes took much longer than I expected, between 20 and 70 seconds of waiting, because each thread gets only a short time on the CPU and then the CPU moves to another thread, so the processes finish later] 
 
 ## Question 2: What was the most challenging part of this assignment?
 
