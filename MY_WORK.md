@@ -328,15 +328,25 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[In Round-Robin, when a process does not finish within its time quantum, it is paused, yields the CPU for a context switch, and is added back to the end of the ready queue. For example, in my run P9 has a burst time of 8318ms and the time quantum is 4000ms, so it was re-queued 2 times before finishing: after its first quantum it had 4318ms remaining, and after its second quantum it had 318ms remaining. Re-queueing is important for fairness because it prevents a long process from taking the CPU and freezing the other processes. It also gives short processes, such as P6 with a burst time of only 2544ms, a chance to run sooner, which reduces the waiting time and avoids starvation.]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[P9 executing quantum [4000ms]
+P9 completed quantum 4000ms
+    Remaining time: 4318ms
+P9 yields CPU for context switch
+P9 (Priority: 3) added to ready queue | Burst time: 8318ms
+...
+P9 executing quantum [4000ms]
+P9 completed quantum 4000ms
+    Remaining time: 318ms
+P9 yields CPU for context switch
+P9 (Priority: 3) added to ready queue | Burst time: 8318ms]
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+[In the snippet, P9 runs for its full quantum of 4000ms, so its remaining time drops from 8318ms to 4318ms. Since it is not finished, it yields the CPU for a context switch and is added again to the ready queue. The same happens in the second round, where the remaining time becomes 318ms and P9 is re-queued again. After that, P9 gets the CPU for a third time and finishes its last 318ms.]
 
 ## Question 3: Thread Lifecycle
 
