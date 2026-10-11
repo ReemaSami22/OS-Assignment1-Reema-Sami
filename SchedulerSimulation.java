@@ -328,6 +328,7 @@ System.out.println("Total Context Switches: " + contextSwitchCount);
         }
         
         // End of the scheduler simulation
+        displayWaitingTimeSummary();
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╔════════════════════════════════════════════════════════════════════════════════╗" + 
                           Colors.RESET);
