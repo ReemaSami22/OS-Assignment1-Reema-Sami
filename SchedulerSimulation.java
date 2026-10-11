@@ -312,7 +312,10 @@ System.out.println("Total Context Switches: " + contextSwitchCount);
                     // FEATURE 3: save the last process too
              completedProcesses.add(process);
                 }
-            }
+            } else {
+    // FEATURE 3: this process finished its work, so save it for the final table
+    completedProcesses.add(process);
+}
         }
         
         // End of the scheduler simulation
