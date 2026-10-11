@@ -309,6 +309,8 @@ System.out.println("Total Context Switches: " + contextSwitchCount);
                                       Colors.RESET + Colors.YELLOW + " is the last process → running to completion" + 
                                       Colors.RESET);
                     process.runToCompletion(); // Run until the process completes
+                    // FEATURE 3: save the last process too
+             completedProcesses.add(process);
                 }
             }
         }
