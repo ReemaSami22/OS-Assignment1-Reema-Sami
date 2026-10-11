@@ -268,7 +268,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most challenging part of this assignment was using Git correctly, because my commits did not work properly every time. Sometimes the commit failed because I forgot to save the file or to stage the changes, and at the beginning I also had to set my name and university email in Git. Another problem was my student ID: after I changed it in the code, it did not update on GitHub and kept showing the old number. It was hard because I did not understand the reason at first, and I thought my code was wrong, while in fact I was looking at the instructor's repository and not my own fork. This was stressful because the assignment requires my name and ID to match in the code, so I had to fix it before continuing with the features]
 
 ## Question 3: How did you overcome the challenges you faced?
 
