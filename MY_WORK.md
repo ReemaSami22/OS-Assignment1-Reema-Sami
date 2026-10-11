@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| | *Full Name* | Reema Sami Alenezi |
-| *Student ID* | 445052035 |
-| *University Email* | 445052035@std.psau.edu.sa |
-| *GitHub Username* | ReemaSami22 |
-| *Repository Link* | https://github.com/ReemaSami22/OS-Assignment1-Reema-Sami |
+| | **Full Name** | Reema Sami Alenezi |
+| **Student ID** | 445052035 |
+| **University Email** | 445052035@std.psau.edu.sa |
+| **GitHub Username**| ReemaSami22 |
+| **Repository Link** | https://github.com/ReemaSami22/OS-Assignment1-Reema-Sami |
 ---
 
 ## 🎥 Video Link
