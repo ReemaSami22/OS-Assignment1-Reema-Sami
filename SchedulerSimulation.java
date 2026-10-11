@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Random;
-
 // ANSI Color Codes for enhanced terminal output
 class Colors {
     public static final String RESET = "\u001B[0m";
@@ -180,6 +181,8 @@ public class SchedulerSimulation {
      // FEATURE 2: Static counter for context switches
     // Incremented each time a new process starts running
     private static int contextSwitchCount = 0;
+    // FEATURE 3: keeps every finished process so we can print the final table
+private static List<Process> completedProcesses = new ArrayList<>();
     public static void main(String[] args) {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
