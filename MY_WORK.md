@@ -276,7 +276,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[When I got an error, I first read the red error message carefully to find where the mistake was. Then I searched for the meaning of the error and went back to what I had learned in the course to understand the cause. For example, when I got the error "variable already defined", I looked at the line number in the message and found that I had written the same line twice, so I deleted the duplicate and compiled again. I also tested the program after each small change, so that if a new error appeared I knew it came from the last change. This way I fixed the errors step by step instead of changing many things at once]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
