@@ -183,6 +183,15 @@ public class SchedulerSimulation {
     private static int contextSwitchCount = 0;
     // FEATURE 3: keeps every finished process so we can print the final table
 private static List<Process> completedProcesses = new ArrayList<>();
+// FEATURE 3: prints the final table with waiting and turnaround times
+private static void displayWaitingTimeSummary() {
+    System.out.println();
+    System.out.println("Process Name | Burst Time | Waiting Time | Turnaround Time");
+    for (Process p : completedProcesses) {
+        System.out.println(p.getName() + " | " + p.getBurstTime() + " | "
+                + p.getTotalWaitingTime() + " | " + p.getTurnaroundTime());
+    }
+}
     public static void main(String[] args) {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
