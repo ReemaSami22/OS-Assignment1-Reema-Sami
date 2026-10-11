@@ -106,23 +106,47 @@
 >
 > 📌 **NOTE:** Each entry needs: date and time, what you did, details, challenges, solution, and time spent. Real challenges are fine (and expected). Do not invent fake ones.
 
-## Example Entry (do not copy it, write your own)
+### Entry 1 - [October 10, 2026, 7:42 PM]
+**What I did**: Forked the starter repository, renamed it, and set my student ID in the code.
+**Details**: I cloned my fork to my computer with VS Code and set the student ID to 445052035 in SchedulerSimulation.java, then pushed the change to GitHub.
+**Challenges**: Git was not recognized at first, and I named the repository wrongly. The student ID kept showing as 123456789 on GitHub because I was looking at the instructor's repository, not mine.
+**Solution**: I installed Git, renamed the repository, fixed the remote URL, and checked that I was viewing my own fork.
+**Time spent**: [about 1 hour]
 
-### Entry 1 - [September 22, 2026, 2:30 PM]
-**What I did**: Forked the repository and set up my student ID
+### Entry 2 - [October 10, 2026, 8:52 PM]
+**What I did**: Started Feature 1 (Process Priority) by adding a priority field to the Process class.
+**Details**: I added a private int priority field and a getPriority() getter, so each process can store a priority from 1 to 10.
+**Challenges**: I first put the field inside the constructor, which caused errors.
+**Solution**: I moved the field above the constructor, as a class-level variable.
+**Time spent**: [about 40 minutes]
 
-**Details**:
-- Created GitHub account with university email
-- Forked the starter repository and renamed it
-- Changed student ID on line 150 to my actual ID (441234567)
-- Compiled and ran the program successfully
-- Committed and pushed: `Set my student ID: 441234567`
+### Entry 3 - [October 10, 2026, 9:41 PM]
+**What I did**: Finished Feature 1 by generating a random priority and displaying it.
+**Details**: I used random.nextInt(10) + 1 to create the priority, passed it to the Process constructor, and printed it when the process enters the ready queue. The queue order stays FIFO.
+**Challenges**: My first push on GitHub did not include the priority code, and I also typed a wrong import (java.util.list).
+**Solution**: I checked the pushed file with git show, committed again, and fixed the import.
+**Time spent**: [about 1 hour]
 
-**Challenges**: Had to install JDK first because `javac` wasn't recognized
+### Entry 4 - [October 10, 2026, 11:44 PM]
+**What I did**: Implemented Feature 2, the context switch counter.
+**Details**: I added a static int contextSwitchCount and increased it each time a new process is taken from the queue to run, then printed the total at the end of the simulation.
+**Challenges**: I accidentally deleted the increment line while fixing another error, and one print was placed before the loop.
+**Solution**: I noticed the missing ++ in the code, restored it, and checked that the final total is printed after the loop.
+**Time spent**: [about 30 minutes]
 
-**Solution**: Downloaded JDK 17 and set the PATH variable
+### Entry 5 - [October 11, 2026, 12:30 AM]
+**What I did**: Started Feature 3 (waiting time) by tracking when each process waits in the ready queue.
+**Details**: I added totalWaitingTime and lastReadyTime to Process, and used System.currentTimeMillis() in updateWaitingTime() to add the time spent waiting each time the process gets the CPU.
+**Challenges**: I got "variable already defined" and "illegal start of expression" errors from a duplicated line and an unfinished println.
+**Solution**: I deleted the duplicate lines and the incomplete statement and compiled again until there were no errors.
+**Time spent**: [about 45 minutes]
 
-**Time spent**: 30 minutes
+### Entry 6 - [October 11, 2026, 8:36 AM]
+**What I did**: Finished Feature 3 by saving finished processes and printing the final table.
+**Details**: I created a completedProcesses list, added each process when it finishes, and wrote displayWaitingTimeSummary() to print Process Name, Burst Time, Waiting Time and Turnaround Time (waiting + burst). I ran the full program and the output was correct.
+**Challenges**: VS Code removed my List and ArrayList imports every time I saved, and one git push failed because of no internet.
+**Solution**: I wrote the code that uses List first and then added the imports, and I pushed again once the connection was back.
+**Time spent**: [about 1 hour]
 
 ---
 
