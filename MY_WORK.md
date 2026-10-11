@@ -316,7 +316,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A process is a completely independent program with its own private memory, and communication between processes is complex and slow, while creating a new process costs the system a lot of time and resources. A thread is a lightweight execution path inside the same program, and all threads share the same memory, so communication between them is fast. In my code, the Process class is only a simulated process (a model with a name, burst time and remaining time), and the real Java thread is created by the line new Thread(process) inside addProcessToQueue(). I used threads because they share the same data easily: for example, all of them use the same ready queue, the processMap, and the contextSwitchCount variable. If I had used separate processes, sharing these would be much harder and slower]
 
 ## Question 2: Ready Queue Behavior
 
